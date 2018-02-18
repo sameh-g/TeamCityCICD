@@ -2,7 +2,7 @@
    #$publishProfile = "Dev"
    #$configuration="Debug"
    #$build_rootFolder= "D:\DWS_Packages\Sprint17\Build#1.40-09112017\UIServer"
-   
+   #test commit
     param 
     ( 
         [Parameter(Mandatory=$true)][String] $solutionSource, #solution folder path
