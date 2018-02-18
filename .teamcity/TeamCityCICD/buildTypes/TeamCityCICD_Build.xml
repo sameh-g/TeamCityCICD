@@ -49,6 +49,16 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
+      <runner id="RUNNER_4" name="" type="jetbrains_powershell">
+        <parameters>
+          <param name="jetbrains_powershell_execution" value="PS1" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_scriptArguments" value="&quot;D:\Biohome_GIT\src&quot;,&quot;Dev&quot;,&quot;Debug&quot;, &quot;D:\DWS_Packages\Sprint17\Build#1.40-09112017\UIServer&quot;" />
+          <param name="jetbrains_powershell_script_file" value="SamehAutomation/powerShellScripts/powershell.ps1" />
+          <param name="jetbrains_powershell_script_mode" value="FILE" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="TeamCityCICD_HttpsGithubComSamehmagdytawfikTeamCityCICDRefsHeadsMaster" />
