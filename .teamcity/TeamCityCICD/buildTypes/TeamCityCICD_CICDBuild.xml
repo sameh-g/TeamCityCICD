@@ -14,13 +14,6 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="RUNNER_6" name="" type="dotnet.cli">
-        <parameters>
-          <param name="command" value="restore" />
-          <param name="paths" value="SamehAutomation.sln" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
       <runner id="RUNNER_7" name="" type="dotnet.cli">
         <parameters>
           <param name="command" value="build" />
