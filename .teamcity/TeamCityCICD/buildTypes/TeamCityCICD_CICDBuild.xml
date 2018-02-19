@@ -14,16 +14,6 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="RUNNER_5" name="" type="VS.Solution">
-        <parameters>
-          <param name="build-file-path" value="SamehAutomation.sln" />
-          <param name="msbuild_version" value="12.0" />
-          <param name="targets" value="Rebuild" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="toolsVersion" value="12.0" />
-          <param name="vs.version" value="vs2013" />
-        </parameters>
-      </runner>
       <runner id="RUNNER_6" name="" type="dotnet.cli">
         <parameters>
           <param name="command" value="restore" />
