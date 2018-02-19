@@ -4,7 +4,7 @@
   <description />
   <settings>
     <parameters />
-    <build-runners order="RUNNER_9, RUNNER_5, RUNNER_6, RUNNER_7, RUNNER_8">
+    <build-runners order="RUNNER_9, RUNNER_10, RUNNER_8">
       <runner id="RUNNER_9" name="NuGet Package" type="jb.nuget.installer">
         <parameters>
           <param name="nuget.path" value="%teamcity.tool.NuGet.CommandLine.DEFAULT%" />
@@ -12,6 +12,30 @@
           <param name="nuget.use.restore" value="restore" />
           <param name="sln.path" value="SamehAutomation.sln" />
           <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_10" name="Build Solution" type="MSBuild">
+        <parameters>
+          <param name="build-file-path" value="SamehAutomation.sln" />
+          <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
+          <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
+          <param name="dotNetCoverage.NCover.Reg" value="selected" />
+          <param name="dotNetCoverage.NCover.platformBitness" value="x86" />
+          <param name="dotNetCoverage.NCover.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.NCover3.Reg" value="selected" />
+          <param name="dotNetCoverage.NCover3.args" value="//ias .*" />
+          <param name="dotNetCoverage.NCover3.platformBitness" value="x86" />
+          <param name="dotNetCoverage.NCover3.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.NCover3.reporter.executable.args" value="//or FullCoverageReport:Html:{teamcity.report.path}" />
+          <param name="dotNetCoverage.PartCover.Reg" value="selected" />
+          <param name="dotNetCoverage.PartCover.includes" value="[*]*" />
+          <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
+          <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="msbuild_version" value="15.0" />
+          <param name="run-platform" value="x86" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="toolsVersion" value="15.0" />
         </parameters>
       </runner>
       <runner id="RUNNER_8" name="" type="NUnit">
@@ -39,30 +63,6 @@
           <param name="nunit_platform" value="MSIL" />
           <param name="nunit_version" value="NUnit-3.0.0" />
           <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_10" name="Build Solution" type="MSBuild">
-        <parameters>
-          <param name="build-file-path" value="SamehAutomation.sln" />
-          <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
-          <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
-          <param name="dotNetCoverage.NCover.Reg" value="selected" />
-          <param name="dotNetCoverage.NCover.platformBitness" value="x86" />
-          <param name="dotNetCoverage.NCover.platformVersion" value="v2.0" />
-          <param name="dotNetCoverage.NCover3.Reg" value="selected" />
-          <param name="dotNetCoverage.NCover3.args" value="//ias .*" />
-          <param name="dotNetCoverage.NCover3.platformBitness" value="x86" />
-          <param name="dotNetCoverage.NCover3.platformVersion" value="v2.0" />
-          <param name="dotNetCoverage.NCover3.reporter.executable.args" value="//or FullCoverageReport:Html:{teamcity.report.path}" />
-          <param name="dotNetCoverage.PartCover.Reg" value="selected" />
-          <param name="dotNetCoverage.PartCover.includes" value="[*]*" />
-          <param name="dotNetCoverage.PartCover.platformBitness" value="x86" />
-          <param name="dotNetCoverage.PartCover.platformVersion" value="v2.0" />
-          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="msbuild_version" value="15.0" />
-          <param name="run-platform" value="x86" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="toolsVersion" value="15.0" />
         </parameters>
       </runner>
     </build-runners>
