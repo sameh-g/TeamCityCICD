@@ -56,6 +56,15 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
+      <runner id="RUNNER_9" name="NuGet Package" type="jb.nuget.installer">
+        <parameters>
+          <param name="nuget.path" value="%teamcity.tool.NuGet.CommandLine.DEFAULT%" />
+          <param name="nuget.updatePackages.mode" value="sln" />
+          <param name="nuget.use.restore" value="restore" />
+          <param name="sln.path" value="SamehAutomation.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="TeamCityCICD_HttpsGithubComSamehmagdytawfikTeamCityCICDRefsHeadsMaster" />
