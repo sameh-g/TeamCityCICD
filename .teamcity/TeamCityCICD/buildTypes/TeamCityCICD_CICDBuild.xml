@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c4321a27-f3cd-4780-9f06-9da674f0b5d5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2017.2/project-config.xsd">
-  <name>Build</name>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3675e438-f467-41b5-a928-3906f4d68346" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2017.2/project-config.xsd">
+  <name>CICDBuild</name>
   <description />
   <settings>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_1" name="" type="VS.Solution">
+      <runner id="RUNNER_5" name="" type="VS.Solution">
         <parameters>
           <param name="build-file-path" value="SamehAutomation.sln" />
           <param name="msbuild_version" value="12.0" />
@@ -15,14 +15,21 @@
           <param name="vs.version" value="vs2013" />
         </parameters>
       </runner>
-      <runner id="RUNNER_2" name="" type="dotnet.cli">
+      <runner id="RUNNER_6" name="" type="dotnet.cli">
+        <parameters>
+          <param name="command" value="restore" />
+          <param name="paths" value="SamehAutomation.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_7" name="" type="dotnet.cli">
         <parameters>
           <param name="command" value="build" />
           <param name="paths" value="SamehAutomation.sln" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="RUNNER_3" name="automationStep" type="NUnit">
+      <runner id="RUNNER_8" name="" type="NUnit">
         <parameters>
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
           <param name="dotNetCoverage.NCover.HTMLReport.File.Type" value="1" />
@@ -43,7 +50,7 @@
           <param name="nunit_enabled" value="checked" />
           <param name="nunit_environment" value="auto" />
           <param name="nunit_include" value="SamehAutomation\bin\Debug\SamehAutomation.dll" />
-          <param name="nunit_path" value="%teamcity.tool.NUnit.Console.3.8.0%" />
+          <param name="nunit_path" value="%teamcity.tool.NUnit.Console.DEFAULT%" />
           <param name="nunit_platform" value="MSIL" />
           <param name="nunit_version" value="NUnit-3.0.0" />
           <param name="teamcity.step.mode" value="default" />
@@ -54,15 +61,7 @@
       <vcs-entry-ref root-id="TeamCityCICD_HttpsGithubComSamehmagdytawfikTeamCityCICDRefsHeadsMaster" />
     </vcs-settings>
     <requirements />
-    <build-triggers>
-      <build-trigger id="vcsTrigger" type="vcsTrigger">
-        <parameters>
-          <param name="branchFilter" value="+:*" />
-          <param name="enableQueueOptimization" value="true" />
-          <param name="quietPeriodMode" value="DO_NOT_USE" />
-        </parameters>
-      </build-trigger>
-    </build-triggers>
+    <build-triggers />
     <cleanup />
   </settings>
 </build-type>
