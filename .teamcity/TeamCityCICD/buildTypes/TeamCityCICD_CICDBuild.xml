@@ -14,13 +14,6 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="RUNNER_7" name="" type="dotnet.cli">
-        <parameters>
-          <param name="command" value="build" />
-          <param name="paths" value="SamehAutomation.sln" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
       <runner id="RUNNER_8" name="" type="NUnit">
         <parameters>
           <param name="dotNetCoverage.NCover.HTMLReport.File.Sort" value="0" />
