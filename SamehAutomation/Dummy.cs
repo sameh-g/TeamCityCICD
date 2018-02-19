@@ -31,7 +31,7 @@ namespace SamehAutomation
             string ptxt =productTitle.Text;
             
 
-            Assert.AreEqual("PlayStation 4 Slim 1TB Console_22",ptxt);
+            Assert.AreEqual("PlayStation 4 Slim 1TB Console_2====",ptxt);
             driver.Quit();
 
 
