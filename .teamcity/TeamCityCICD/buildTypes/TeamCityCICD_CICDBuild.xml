@@ -4,7 +4,16 @@
   <description />
   <settings>
     <parameters />
-    <build-runners>
+    <build-runners order="RUNNER_9, RUNNER_5, RUNNER_6, RUNNER_7, RUNNER_8">
+      <runner id="RUNNER_9" name="NuGet Package" type="jb.nuget.installer">
+        <parameters>
+          <param name="nuget.path" value="%teamcity.tool.NuGet.CommandLine.DEFAULT%" />
+          <param name="nuget.updatePackages.mode" value="sln" />
+          <param name="nuget.use.restore" value="restore" />
+          <param name="sln.path" value="SamehAutomation.sln" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
       <runner id="RUNNER_5" name="" type="VS.Solution">
         <parameters>
           <param name="build-file-path" value="SamehAutomation.sln" />
@@ -53,15 +62,6 @@
           <param name="nunit_path" value="%teamcity.tool.NUnit.Console.DEFAULT%" />
           <param name="nunit_platform" value="MSIL" />
           <param name="nunit_version" value="NUnit-3.0.0" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_9" name="NuGet Package" type="jb.nuget.installer">
-        <parameters>
-          <param name="nuget.path" value="%teamcity.tool.NuGet.CommandLine.DEFAULT%" />
-          <param name="nuget.updatePackages.mode" value="sln" />
-          <param name="nuget.use.restore" value="restore" />
-          <param name="sln.path" value="SamehAutomation.sln" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
