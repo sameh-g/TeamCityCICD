@@ -50,8 +50,6 @@ C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\Mono.Cecil.Mdb.dll
 C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\Mono.Cecil.Rocks.dll
 C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\SamehAutomation.dll
 C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\SamehAutomation.pdb
-C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\Excel.dll
-C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\ICSharpCode.SharpZipLib.dll
 C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\nunit.framework.dll
 C:\TeamCityGitTest\TeamCityCICD\SamehAutomation\bin\Debug\WebDriver.dll

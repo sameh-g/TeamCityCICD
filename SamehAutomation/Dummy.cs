@@ -14,7 +14,7 @@ namespace SamehAutomation
     [TestFixture]
     public class Dummy
     {
-        public static string TestCasesDataFile = ConfigurationManager.AppSettings["TestCasesDataFile"];
+        //public static string TestCasesDataFile = ConfigurationManager.AppSettings["TestCasesDataFile"];
 
 
         [Test]
@@ -39,10 +39,9 @@ namespace SamehAutomation
             Assert.AreEqual("PlayStation 4 Slim 1TB Console",ptxt);
             driver.Quit();
 
-
         }
 
-        [Test]
+       /* [Test]
         public void ReadTestDataFromExcel()
         {
             // Ya sameeeeeeeeeeeeeeeeeeeeeeeeh :)
@@ -71,7 +70,7 @@ namespace SamehAutomation
             driver.Quit();
 
 
-        }
+        }*/
 
     }
 }
