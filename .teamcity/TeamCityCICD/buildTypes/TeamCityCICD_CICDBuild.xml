@@ -70,7 +70,16 @@
       <vcs-entry-ref root-id="TeamCityCICD_HttpsGithubComSamehmagdytawfikTeamCityCICDRefsHeadsMaster" />
     </vcs-settings>
     <requirements />
-    <build-triggers />
+    <build-triggers>
+      <build-trigger id="TRIGGER_1" type="buildDependencyTrigger">
+        <parameters>
+          <param name="afterSuccessfulBuildOnly" value="true" />
+          <param name="branchFilter"><![CDATA[+:<default>
++:*]]></param>
+          <param name="dependsOn" value="TeamCityCICD_CICDBuild" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
     <cleanup />
   </settings>
 </build-type>
