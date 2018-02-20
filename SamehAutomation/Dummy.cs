@@ -21,8 +21,6 @@ namespace SamehAutomation
         public void DummyTest()
         {
 
-
-
             IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.amazon.com/");
             driver.Manage().Window.Maximize();
